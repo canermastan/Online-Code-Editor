@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Code Editor</title>
+    <!-- Fomantic-UI CSS Library -->
+    <link rel="stylesheet" type="text/css" th:href="@{https://cdn.jsdelivr.net/npm/fomantic-ui/dist/semantic.min.css}">
+    <!-- jQuery JavaScript Library -->
+    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js}"></script>
+</head>
+<body>
+
+<h2>Online Code Editor</h2>
+
+<!-- Select language dropdown -->
+<div class="ui dropdown" id="languages">
+    <div class="text">Select Language</div>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+        <div class="item">
+            Python
+        </div>
+        <div class="item">
+            Go
+        </div>
+        <div class="item">
+            C
+        </div>
+        <div class="item">
+            C++
+        </div>
+        <div class="item">
+            JavaScript
+        </div>
+        <div class="item">
+            Php
+        </div>
+    </div>
+</div>
+
+<br>
+
+<!-- Editor -->
+<div class="ui attached segment">
+    <!-- Ace C9 Editor -->
+    <div id="editor" style="height: 350px"></div>
+    <!-- Execute Code Button -->
+    <button class="ui positive button right floated" onclick="executeCode()">Execute</button>
+    <br><br>
+</div>
+
+<!-- Output -->
+<div class="ui atteched segment">
+    <!-- Header -->
+    <h3 class="ui header">
+        Output
+    </h3>
+    <!-- Output message -->
+    <div class="ui atteched segment" id="output">
+        Please Select Language and press Execute button.
+    </div>
+</div>
+
+<!-- Fomantic-UI JavaScript Library -->
+<script th:src="@{https://cdn.jsdelivr.net/npm/fomantic-ui/dist/semantic.min.js}"></script>
+
+<!-- Ace C9 Code Editor Library -->
+<script th:src="@{/js/lib/ace.js}"></script>
+<script th:src="@{/js/lib/theme-solarized_light.js}"></script> <!-- Theme -->
+<script th:src="@{/js/ace/ext-language_tools.js}" src="ace/ext-language_tools.js"></script>
+
+<!-- Our JavaScript File -->
+<script th:src="@{/js/code-editor.js}"></script>
+
+</body>
+</html>
