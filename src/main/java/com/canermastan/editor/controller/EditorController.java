@@ -29,7 +29,6 @@ public class EditorController {
             case "javascript" -> new File("main.js");
             case "c++" -> new File("main.cpp");
             case "python" -> new File("main.py");
-            case "java" -> new File("Main.java");
             case "go" -> new File("main.go");
             default -> new File("main" + "." + editor.getLanguage());
         };
